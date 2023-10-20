@@ -49,24 +49,50 @@
         /* background-color: aqua; */
         height:80vh;
      }
-     .col-hero{
-        display: grid;
-        justify-items: center;
+     .hero{
+        flex-wrap: wrap;
+        align-self: center;
      }
      .col{
-     
+     display: flex;
+     /* background-color: aqua; */
+     flex-direction: column;
+     height: 500px;
+     justify-content: center;
      }
      .col h1{
         font-size: 5rem;
+        font-family: sans-serif;
+        line-height: 1;
+     }
+     .title-wrapper{
+        flex-grow: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+     }
+     .btn-wrapper{
+        display: flex;
+       flex-direction: column;
+       flex-grow: 1;
+       justify-content: center;
      }
      .col button{
-
+      font-size: 1.5rem;
+      padding: 1.5rem;
+      border-radius: 3rem;
+      width: 230px;
+      border: none;
+      font-weight: bolder;
+     background-color: red;
+     background-image: linear-gradient(90deg,rgba(40, 3, 40, 0.842), rgb(229, 59, 189));
      }
-     .col-hero img{
-     width: 600px;
-     height: 600px;
+     .hero img{
+     width: 500px;
+     height: 500px;
      object-fit: cover;
      border-radius: 5rem;
+     box-shadow:-20px 5px 100px #00f;
      }
     </style>
 </head>
@@ -83,10 +109,14 @@
             </header>
             <div class="content">
                 <div class="col">
+                    <div class="title-wrapper">
                     <h1>Always Stay Connected</h1>
+                    </div>
+                    <div class="btn-wrapper">
                     <button>Learn More</button>
+                    </div>
                 </div>
-                <div class="col-hero">
+                <div class="col hero">
                     <img src="static/images/phone.jpg" alt="image1">
                 </div>
             </div>
